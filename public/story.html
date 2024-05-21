@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidcom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+    <link href="./story.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="invertedcursor" class="cursor-small"></div>
+    <div class="main-container">
+        <div id="story-container-flex">
+            <!-- Prev button -->
+            <button class="nav-button prev" role="button"><img width="26" height="26" src="https://img.icons8.com/metro/26/back.png" alt="back"/></button>            
+            <div id="story-content">
+                <!-- img-thumbnail : creates a border around image --> 
+                <img id="story-img" src="https://storage.googleapis.com/kidcom-web.appspot.com/The_Honest_Woodcutter/Images/img0_1.png" class="img-thumbnail mx-auto d-block" alt="...">
+                <p id="story-text">Chop Chop Chop</p>
+            </div>
+            <!-- Next button -->
+            <button class="nav-button next" role="button"><img width="26" height="26" src="https://img.icons8.com/metro/26/forward.png" alt="next"/></button>
+        </div>
+    </div>
+    <div id="popup-window">
+        <div id="popup-button-container-flex">
+            <button id="collect-button"> Collect </button>
+            <button id="close-button">&times;</button>
+        </div>
+        <hr> 
+        <h1 id="popup-word">Word</h1>
+        <p id="popup-meaning">Meaning of the word appears here.</p>
+    </div> 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./story.js" charset="utf-8"></script>
+    <script src="./speechRecog.js" charset="utf-8"></script>
+</body>
+</html>
